@@ -12,7 +12,29 @@ public class Main
      */
     private static void workWithData ()
     {
+        Healthplan plan1 = new Healthplan(1, "Plan A", Plan.PRICE);
+        Healthplan plan2 = new Healthplan(2, "Plan B", Plan.NAME);
 
+        System.out.println(plan1);
+        System.out.println(plan2);
+
+        // Employee
+        Employee emp1 = new Employee(1, "John Doe", "john@example.com", "password123", 3);
+        emp1.addHealthplan(0, "Basic Health Plan");
+        emp1.addHealthplan(0, "Another Plan"); // Hata mesajı vermeli
+        emp1.addHealthplan(1, "Premium Health Plan");
+        emp1.addHealthplan(3, "Invalid Plan"); // Geçersiz index için hata mesajı vermeli
+
+        System.out.println(emp1);
+
+        // Company
+        Company company = new Company(1, "TechCorp", 500000, 3);
+        company.addEmployee(1, "John Doe");
+        company.addEmployee(1, "Jane Doe"); // Hata mesajı vermeli
+        company.addEmployee(0, "Alice Smith");
+        company.addEmployee(4, "Invalid Employee"); // Geçersiz index için hata mesajı vermeli
+
+        System.out.println(company);
     }
 
     /**
