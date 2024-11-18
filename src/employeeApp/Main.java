@@ -12,8 +12,8 @@ public class Main
      */
     private static void workWithData ()
     {
-        Healthplan plan1 = new Healthplan(1, "Plan A", Plan.PRICE);
-        Healthplan plan2 = new Healthplan(2, "Plan B", Plan.NAME);
+        Healthplan plan1 = new Healthplan(1, "Plan A", Plan.PLAN1);
+        Healthplan plan2 = new Healthplan(2, "Plan B", Plan.PLAN2);
 
         System.out.println(plan1);
         System.out.println(plan2);
